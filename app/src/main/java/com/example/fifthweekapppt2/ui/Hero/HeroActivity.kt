@@ -6,8 +6,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fifthweekapppt2.R
-import com.example.fifthweekapppt2.data.api.SuperHeroAPI
-
 import com.example.fifthweekapppt2.data.model.SuperHeroesItem
 import com.squareup.picasso.Picasso
 
@@ -16,9 +14,8 @@ class HeroActivity : AppCompatActivity() {
         const val HERO_ARG = "hero"
     }
 
-    private val heroItem:SuperHeroesItem by lazy { intent.getSerializableExtra(HERO_ARG) as SuperHeroesItem }
+    private val heroItem: SuperHeroesItem by lazy { intent.getSerializableExtra(HERO_ARG) as SuperHeroesItem }
 
-    @SuppressLint("StringFormatInvalid")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hero)
@@ -33,7 +30,7 @@ class HeroActivity : AppCompatActivity() {
         val combat = findViewById<TextView>(R.id.hero_combat_fullscreen)
         Picasso.get().load(heroItem.image.url).into(img)
         name.text = getString(R.string.name, heroItem.name)
-        intelligence.text = "${getString(R.string.intelligence)} ${heroItem.powerstats.intelligence}"
+        intelligence.text ="${getString(R.string.intelligence)} ${heroItem.powerstats.intelligence}"
         strength.text = "${getString(R.string.strength)} ${heroItem.powerstats.strength}"
         speed.text = "${getString(R.string.speed)} ${heroItem.powerstats.speed}"
         durability.text = "${getString(R.string.durability)} ${heroItem.powerstats.durability}"

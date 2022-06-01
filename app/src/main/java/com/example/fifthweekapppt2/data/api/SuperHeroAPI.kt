@@ -1,23 +1,18 @@
 package com.example.fifthweekapppt2.data.api
 
 import com.example.fifthweekapppt2.data.model.SuperHeroesItem
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
-import okhttp3.OkHttpClient
-
-import okhttp3.logging.HttpLoggingInterceptor
-
-
 
 
 object SuperHeroAPI {
     const val BASE_URL = "https://superheroapi.com/api/3202191630032155/"
     val retrofitServices = create()
-
-
 
 
     private fun create(): RetrofitServices {
@@ -38,6 +33,6 @@ object SuperHeroAPI {
 
 interface RetrofitServices {
     @GET("{id}")
-    fun getSuperHero(@Path("id") id:Int): Call<SuperHeroesItem>
+    fun getSuperHero(@Path("id") id: Int): Call<SuperHeroesItem>
 
 }

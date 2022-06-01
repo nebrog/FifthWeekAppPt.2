@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 
-
 data class SuperHeroesItem(
 
     @SerializedName("id")
@@ -19,14 +18,12 @@ data class SuperHeroesItem(
 
     @SerializedName("powerstats")
     val powerstats: Powerstats,
-
-    ): Serializable
+) : Serializable
 
 class Image(
     @SerializedName("url")
-    val url:String
-
-): Serializable
+    val url: String
+) : Serializable
 
 class Powerstats(
     @SerializedName("intelligence")
@@ -41,6 +38,5 @@ class Powerstats(
     val power: Int?,
     @SerializedName("combat")
     val combat: Int?,
-
-): Serializable
+) : Serializable
 

@@ -11,7 +11,7 @@ import retrofit2.http.Path
 
 
 object SuperHeroAPI {
-    const val BASE_URL = "https://superheroapi.com/api/3202191630032155/"
+    const val BASE_URL = "https://akabab.github.io/superhero-api/api/"
     val retrofitServices = create()
 
 
@@ -32,7 +32,7 @@ object SuperHeroAPI {
 }
 
 interface RetrofitServices {
-    @GET("{id}")
+    @GET("id/{id}.json")
     fun getSuperHero(@Path("id") id: Int): Call<SuperHeroesItem>
 
 }

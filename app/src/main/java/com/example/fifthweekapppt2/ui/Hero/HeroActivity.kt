@@ -28,7 +28,7 @@ class HeroActivity : AppCompatActivity() {
         val durability = findViewById<TextView>(R.id.hero_durability_fullscreen)
         val power = findViewById<TextView>(R.id.hero_power_fullscreen)
         val combat = findViewById<TextView>(R.id.hero_combat_fullscreen)
-        Picasso.get().load(heroItem.image.url).into(img)
+        Picasso.get().load(heroItem.image.sm).into(img)
         name.text = getString(R.string.name, heroItem.name)
         intelligence.text ="${getString(R.string.intelligence)} ${heroItem.powerstats.intelligence}"
         strength.text = "${getString(R.string.strength)} ${heroItem.powerstats.strength}"

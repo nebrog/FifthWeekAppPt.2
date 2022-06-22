@@ -76,7 +76,7 @@ class HeroesAdapter(private val onHeroClickListener: OnHeroClickListener) :
                         hero = item
                         heroName.text = "${item.id}. ${item.name}"
                         Picasso.get()
-                            .load(item.image.url)
+                            .load(item.image.sm)
                             .error(R.drawable.placeholder_error)
                             .placeholder(R.drawable.placeholder_loading)
                             .into(heroImg)

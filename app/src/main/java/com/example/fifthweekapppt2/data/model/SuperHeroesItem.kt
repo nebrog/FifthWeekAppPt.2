@@ -13,7 +13,7 @@ data class SuperHeroesItem(
     @SerializedName("name")
     val name: String,
 
-    @SerializedName("image")
+    @SerializedName("images")
     val image: Image,
 
     @SerializedName("powerstats")
@@ -21,8 +21,14 @@ data class SuperHeroesItem(
 ) : Serializable
 
 class Image(
-    @SerializedName("url")
-    val url: String
+    @SerializedName("xs")
+    val xs: String,
+    @SerializedName("sm")
+    val sm: String,
+    @SerializedName("md:")
+    val md: String,
+    @SerializedName("lg")
+    val lg: String,
 ) : Serializable
 
 class Powerstats(
